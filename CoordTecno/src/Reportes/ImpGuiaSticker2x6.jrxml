@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ImpGuiaSticker2x6" columnCount="2" printOrder="Horizontal" pageWidth="612" pageHeight="792" columnWidth="306" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="c37a53b7-5de0-4f8f-b29c-1d9d5a79d49b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="Cod_Regional" class="java.lang.String"/>
+	<field name="Cod_FormaPago" class="java.lang.Integer"/>
+	<field name="Cons_GuiasU" class="java.lang.String"/>
+	<field name="Nom_Remitente" class="java.lang.String"/>
+	<field name="Nom_Destinatario" class="java.lang.String"/>
+	<field name="Dir_Destinatario" class="java.lang.String"/>
+	<field name="Nom_Ciudad" class="java.lang.String"/>
+	<field name="Nom_Departamento" class="java.lang.String"/>
+	<field name="Unidad" class="java.lang.Integer"/>
+	<field name="Num_Unidades" class="java.lang.Integer"/>
+	<field name="Dice_Contener" class="java.lang.String"/>
+	<field name="Texto_Guia" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="131" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<textField>
+				<reportElement key="colvanes_guia" x="15" y="46" width="272" height="13" uuid="042e5c01-78e5-461a-9641-a819a2ec0f75">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA["COLVANES S.A.S  Guía = *" + $F{Cod_Regional}.toString() + $F{Cod_FormaPago}.toString() + $F{Cons_GuiasU}.toString() + "*"]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement key="logo" x="15" y="10" width="72" height="38" uuid="493fda9c-4e63-4208-94f3-58cdcf696a39">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<imageExpression><![CDATA["src/Reportes/logo Sticker.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement key="remitente" x="15" y="58" width="272" height="13" uuid="4aa59cc5-115f-4660-b899-9f9cbbbdada6">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Remitente: " + $F{Nom_Remitente}.toString()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="destinatario" x="15" y="70" width="272" height="13" uuid="1ec7eb30-7f9a-41f0-9d5e-8f0772db2215">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Destinatario: " + $F{Nom_Destinatario}.toString()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="direccion" x="15" y="82" width="272" height="13" uuid="7dee6734-d48e-4648-a719-f6ac1d45c1f4">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Dirección: " + $F{Dir_Destinatario}.toString()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="ciudad_departamento" x="15" y="94" width="272" height="13" uuid="f04b47e6-1dbe-440d-bbff-983aa097cbae">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Nom_Ciudad}.toString() + "/" + $F{Nom_Departamento}.toString()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="unidad_dicecontener" x="15" y="106" width="272" height="13" uuid="78ac1b7b-00ec-48b5-b6ce-a71ac1863e9d">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Cj: " + $F{Unidad}.toString() + "/" + $F{Num_Unidades}.toString() + "   R: " + $F{Dice_Contener}.toString()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="barra" x="87" y="9" width="214" height="37" uuid="6266dbce-98d9-429e-a6cf-71fd8b66913a">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Code39-Digits" size="24"/>
+				</textElement>
+				<textFieldExpression><![CDATA["*" + $F{Cod_Regional}.toString() + $F{Cod_FormaPago}.toString() + $F{Cons_GuiasU}.toString() + "*"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

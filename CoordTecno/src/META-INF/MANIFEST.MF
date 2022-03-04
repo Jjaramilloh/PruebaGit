@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.7
+Created-By: 1.8.0_171-b11 (Oracle Corporation)
+Class-Path: lib/com.lowagie.text-2.1.7.jar lib/commons-beanutils-1.9.3
+ .jar lib/commons-collections-3.2.2.jar lib/commons-digester-2.1.jar l
+ ib/commons-javaflow-20060411.jar lib/commons-logging-1.2.jar lib/groo
+ vy-all-2.4.7.jar lib/jasperreports-6.3.0.jar lib/jasperreports-fonts-
+ 6.3.0.jar lib/jasperreports-javaflow-6.3.0.jar lib/jdbc.jar lib/png-e
+ ncoder-1.5.jar lib/poi-3.9.jar lib/sqljdbc42.jar
+X-COMMENT: Main-Class will be added automatically by build
+Main-Class: Conexion.InicioAplicacion
+

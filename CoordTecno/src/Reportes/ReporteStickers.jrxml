@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" columnCount="2" printOrder="Horizontal" pageWidth="612" pageHeight="792" columnWidth="306" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="918a8954-e5e7-4a01-83c8-319f289aa8b5">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="guia" class="java.lang.String"/>
+	<field name="remitente" class="java.lang.String"/>
+	<field name="destinatario" class="java.lang.String"/>
+	<field name="dir" class="java.lang.String"/>
+	<field name="ciudad" class="java.lang.String"/>
+	<field name="unidades" class="java.lang.Integer"/>
+	<variable name="contador" class="java.lang.Integer" resetType="Group" resetGroup="Guia" calculation="Count">
+		<variableExpression><![CDATA[$F{unidades}]]></variableExpression>
+		<initialValueExpression><![CDATA[]]></initialValueExpression>
+	</variable>
+	<group name="Guia">
+		<groupExpression><![CDATA[$F{guia}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="131" splitType="Stretch">
+			<image>
+				<reportElement key="logo" x="15" y="10" width="72" height="38" uuid="04b17c8b-24c4-4480-86e4-fa297048a586"/>
+				<imageExpression><![CDATA["C:\\Enviasql\\Stickers\\src\\Reportes\\logo Sticker.png"]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement key="barra" x="87" y="9" width="214" height="37" uuid="a4c8b81a-c4b4-401b-b87e-f198483ac84d"/>
+				<textElement>
+					<font fontName="Code39-Digits" size="24"/>
+				</textElement>
+				<textFieldExpression><![CDATA["*"+$F{guia}+"*"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="colvanes_guia" x="15" y="46" width="272" height="13" uuid="99ffa4dc-24e1-4ef5-9ed0-91e363278517"/>
+				<textFieldExpression><![CDATA["COLVANES S.A.S  Guía = *" +$F{guia}+"*"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="15" y="58" width="272" height="13" uuid="95eb5f55-8e74-473b-bc07-ff3a7c8ff1c2"/>
+				<textFieldExpression><![CDATA["Remitente: "+$F{remitente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="15" y="70" width="272" height="13" uuid="2e4fe7a5-e4a7-465e-9d4b-3c9aee8242be"/>
+				<textFieldExpression><![CDATA["Destinatario: "+$F{destinatario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="15" y="82" width="272" height="13" uuid="dc3785a7-37ad-463a-a9f2-b163fe5070d2"/>
+				<textFieldExpression><![CDATA["Dir: "+$F{dir}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="15" y="94" width="272" height="13" uuid="883bd83d-9107-4feb-817e-b55c7140c4be"/>
+				<textFieldExpression><![CDATA["Ciudad: "+$F{ciudad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="15" y="107" width="272" height="13" uuid="da3b017a-fa59-4639-b446-b270496df0ff"/>
+				<textFieldExpression><![CDATA["Unidades: "+$V{contador}+"/"+$F{unidades}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
